@@ -1,56 +1,128 @@
+DATE : 24/10/25
+
+NAME : V M KAVIYA
+
+REGISTER NUMBER : 212224040154
+
 EXP NO:16 C PROGRAM TO SEARCH A GIVEN ELEMENT IN THE GIVEN LINKED LIST.
+
 Aim:
+
 To write a C program to search a given element in the given linked list.
 
 Algorithm:
+
 1.	Define the structure for a node in a linked list.
 2.	Define the search function to find a specific character in the linked list.
 3.	Initialize the head of the linked list as needed.
 4.	Call the search function and perform other linked list operations as needed.
  
 Program:
-
-//type your code here
-
+```
+struct Node{
+    struct Node *next; 
+    char data;
+}*head;
+void search(char data)
+{
+    struct Node *ptr;
+    char item=data; 
+    int i=0,flag;
+    ptr = head; 
+    if(ptr == NULL)
+    {
+        printf("Empty List\n");  
+    }
+    else
+    {
+        while (ptr!=NULL)
+        {
+            if(ptr->data == item)
+            {
+                printf("item %c found at location %d ",item,i+1); 
+                flag=0;    
+            }
+            i++;
+            ptr = ptr -> next;   
+        }
+        if(flag!=0)
+        {
+            printf("Item not found\n");
+        }
+}
+}
+```
 Output:
 
-//paste your output here
-
+<img width="707" height="489" alt="image" src="https://github.com/user-attachments/assets/93f01397-a54e-4d4a-86b9-dbe3adfb6116" />
 
 
 Result:
+
 Thus, the program to search a given element in the given linked list is verified successfully.
 
 
  
 EXP NO:17  PROGRAM TO INSERT A NODE IN A LINKED LIST.
+
 Aim:
+
 To write a C program to insert a node in a linked list.
+
 Algorithm:
+
 1.	Define the structure for a node in a linked list
 2.	Define the insert function to insert a new node with character data at the end of the linked list.
 3.	Initialize the head of the linked list as needed.
 4.	Call the insert function and perform other linked list operations as needed.
  
 Program:
-
-//type your code here
+```
+struct Node{ 
+    char data;
+    struct Node *next;
+}*head;
+void insert(char data)
+{
+    struct Node *n=(struct Node*)malloc(sizeof(struct Node));
+    struct Node *temp;
+    if(head==NULL)
+    {
+        head=n;
+        n->data=data; 
+        n->next=NULL; 
+        temp=head; 
+        return;
+}
+while(temp->next!=NULL)
+{
+    temp=temp->next;
+}
+n->data=data; 
+n->next=NULL;
+temp->next=n;
+}
+```
 
 Output:
 
-//paste your output here
+<img width="469" height="419" alt="image" src="https://github.com/user-attachments/assets/36134fd0-68fa-4125-b4df-6a63fc4b133a" />
 
  
 Result:
+
 Thus, the program to insert a node in a linked list is verified successfully.
 
 
  
 EXP NO:18 C PROGRAM TO TRAVERSE A DOUBLY LINKED LIST
+
 Aim:
+
 To write a C program to traverse a doubly linked list.
 
 Algorithm:
+
 1.	Initialize a temporary pointer (temp) to the head of the list.
 2.	Use a while loop to traverse the list until the end (temp == NULL) is reached.
 3.	Inside the loop, print the data of the current node.
