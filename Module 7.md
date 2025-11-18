@@ -1,3 +1,9 @@
+<img width="156" height="177" alt="image" src="https://github.com/user-attachments/assets/56c49a59-f0b4-4ef7-8360-a2c8ce2c5cd6" />DATE : 18/10/25
+
+NAME: V M KAVIYA
+
+REGISTER NUMBER : 212224040154
+
 EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
 
 Aim:
@@ -15,13 +21,30 @@ Else
 6.	Return 0
  
 Program:
+```
+#include<stdio.h> 
+struct eligib
+{
+int age; char n[4];
+};
+int main()
+{
+struct eligib e; scanf("%d%s",&e.age,e.n);
+if(e.age<=6)
+{
+printf("Age:%d\nName:%svaccine:%d\neligibility:no",e.age,e.n,e.age);
+} 
+else
+{
+printf("Age:%d\nName:%svaccine:%d\neligibility:yes",e.age,e.n,e.age);
 
-//type your code here
-
-
+}
+}
+```
 Output:
 
-//paste your output here
+<img width="429" height="166" alt="image" src="https://github.com/user-attachments/assets/b4b7fd3f-d06c-4fb0-92ff-f8c9e0b8736b" />
+
 
 
 Result:
@@ -30,6 +53,7 @@ Thus, the program is verified successfully.
 
 
 EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
+
 Aim:
 To write a C program for passing structure as function and returning a structure from a function
 
@@ -43,18 +67,25 @@ Algorithm:
 7.	Return 0
  
 Program:
-
-//type your code here
-
-
-
-
+```
+#include<stdio.h> 
+struct numbers
+{
+int a; int b;
+}n;
+int add(struct numbers n); int main()
+{
+scanf("%d %d ",&n.a,&n.b);
+printf("%d",add(n));
+}
+int add(struct numbers n)
+{
+return n.a+n.b;
+}
+```
 Output:
 
-
-//paste your output here
-
-
+<img width="156" height="177" alt="image" src="https://github.com/user-attachments/assets/e95b21db-632f-4e63-8bb5-f481490e6eba" />
 
 
 Result:
@@ -85,25 +116,19 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
-
-
-
-
+```
+#include <stdio.h> int main()
+{
+ FILE *p;
+ char name[30]; scanf("%s",name);
+ printf("%s File Created Successfully",name); p=fopen("name","w");
+ printf("\n%s File Opened",name); fclose(p);
+ printf("\n%s File Closed",name);
+}
+```
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
-
-
+<img width="1081" height="393" alt="image" src="https://github.com/user-attachments/assets/f7fafb37-a7c0-452a-a9bb-604036aa27b8" />
 
 
 Result:
@@ -112,8 +137,10 @@ Thus, the program is verified successfully
 
 
 EXP NO:4   PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
+
 Aim:
 To write a C program to read, a file and insert text in that file
+
 Algorithm:
 1.	Include the necessary header file stdio.h.
 2.	Begin the main function.
@@ -132,20 +159,25 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h> 
+int main()
+{
+ FILE *p;
+ char name[20]; int num;
+ char text[50]; scanf("%s%d",name,&num); p=fopen("name","w"); printf("%s 
+ Opened",name); for(int i=0;i<num;i++)
+ {
+   scanf("%s",text); 
+   fputs(text,p);
+ }
+ printf("\nData added Successfully");
 
-//type your code here
-
-
-
-
+}
+```
 Output:
 
-
-//paste your output here
-
-
-
-
+<img width="773" height="406" alt="image" src="https://github.com/user-attachments/assets/88064743-2315-4e25-9c23-b8990f23d0d7" />
 
 
 Result:
@@ -186,21 +218,43 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
-
-//type your code here
-
-
-
-
+```
+#include <stdio.h>
+#include <stdlib.h>
+struct Subject
+{
+    char name[20];
+    int marks;
+};
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
+    if(s==NULL)
+    {
+        printf("Memory Alocation Failed\n");
+        return 1;
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%s %d",s[i].name,&s[i].marks);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%s  %d\n",s[i].name,s[i].marks);
+    }
+    
+    free (s);
+    
+    return 0;
+}
+```
 Output:
 
-
-//paste your output here
-
-
-
-
+<img width="415" height="280" alt="image" src="https://github.com/user-attachments/assets/d091b3e4-c1d0-42d3-8199-99eae8fd22a1" />
 
 
 Result:
+
 Thus, the program is verified successfully
