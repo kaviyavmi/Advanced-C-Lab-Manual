@@ -7,6 +7,7 @@ REGISTER NUMBER : 212224040154
 EXP NO 26: C PROGRAM TO DISPLAY STACK ELEMENTS USING LINKED LIST.
 
 Aim:
+
 To write a C program to display stack elements using linked list.
 
 Algorithm:
@@ -46,16 +47,19 @@ Output:
 
 
 Result:
+
 Thus, the program to display stack elements using linked list is verified successfully. 
 
 
 
-EXP.NO 27: C PROGRAM TO POP AN ELEMENT FROM THE GIVEN STACK USING 
-LINKED LIST.
+EXP.NO 27: C PROGRAM TO POP AN ELEMENT FROM THE GIVEN STACK USING LINKED LIST.
+
 Aim:
+
 To write a C program to pop an element from the given stack using liked list.
 
 Algorithm:
+
 1.	Check for Empty Stack
 2.	If head is equal to NULL, Print "Stack is empty."
 3.	Else Proceed to the next step.
@@ -90,13 +94,18 @@ Output:
 
 
 Result:
+
 Thus, the program to pop an element from the given stack using liked list is verified successfully.
 
  
 EXP NO:28 C PROGRAM TO DISPLAY QUEUE ELEMENTS USING LINKED LIST.
+
 Aim:
+
 To write a C program to display queue elements using linked list.
+
 Algorithm:
+
 1.	Check if Queue is Empty
 2.	Display Queue Elements
 3.	Print the data of the current node pointed to by front
@@ -134,6 +143,7 @@ Output:
 
 
 Result:
+
 Thus, the program to display queue elements using linked list is verified successfully.
 
 
@@ -141,9 +151,11 @@ Thus, the program to display queue elements using linked list is verified succes
 EXP NO:29 C PROGRAM TO INSERT ELEMENTS IN QUEUE USING LINKED LIST
 
 Aim:
+
 To write a C program to insert elements in queue using linked list
 
 Algorithm:
+
 1.	Allocate Memory for New Node
 2.	Set Data and Next Pointer
 3.	Check if Queue is Empty
@@ -181,6 +193,7 @@ Output:
 
 
 Result:
+
 Thus, the program to insert elements in queue using linked list is verified successfully.
 
 
